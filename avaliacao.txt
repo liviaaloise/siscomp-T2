@@ -1,0 +1,54 @@
+Tempo Ref 15s
+1)
+---Executou durante 140s
+---Zerou a referencia 8 vezes
+
+---Quantidade de Swap: 0
+---Quantidade de Page Faults: 141
+2)
+---Executou durante 386s
+---Zerou a referencia 24 vezes
+
+---Quantidade de Swap: 26
+---Quantidade de Page Faults: 361
+
+TEMPO REF 30s
+
+---Executou durante 209s
+---Zerou a referencia 6 vezes
+
+---Quantidade de Swap: 0
+---Quantidade de Page Faults: 209
+
+
+---Executou durante 299s
+---Zerou a referencia 9 vezes
+
+---Quantidade de Swap: 5
+---Quantidade de Page Faults: 295
+
+
+TEMPO REF 90s
+
+---Executou durante 242s
+---Zerou a referencia 2 vezes
+
+---Quantidade de Swap: 0
+---Quantidade de Page Faults: 243
+
+
+---Executou durante 372s
+---Zerou a referencia 4 vezes
+
+---Quantidade de Swap: 17
+---Quantidade de Page Faults: 355
+
+TEMPO REF 5s
+
+---Executou durante 388s
+---Zerou a referencia 64 vezes
+
+---Quantidade de Swap: 26
+---Quantidade de Page Faults: 363
+
+
