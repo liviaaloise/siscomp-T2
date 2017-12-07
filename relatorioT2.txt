@@ -1,0 +1,53 @@
+PUC-Rio	- Trabalho 1 de Sistemas de Computação (INF1019)
+Professor: Markus Endler
+Monitora: Jéssica Almeida
+Alunas:
+Bianca Villar  -  1510321
+Livia Aloise   -  1510952
+
+
+Compilação:
+
+gcc -o T2 gm.c vm.c fila.c
+./T2
+
+
+Modo de uso:
+Entre no terminal, e no diretório do trabalho. Execute “./gm”, para encerrar digite ctrl-c
+
+Execução:
+
+	O arquivo que contem o gerenciador é o gm.
+	O programa começa criando a memória física, depois são criados os quatro processos que inicializam cada um a sua page table.
+	Os processos ficam lendo até acabar o arquivo de log que ele esta lendo. A cada linha lida ele separa o índice da página e o offset, e chama a função trans (definida no vm).
+	A função trans procura na page table do processo a page frame relacionada a esse índice, caso encontre retorna 1, caso contrario retorna 0(page fault).
+	Quando não encontramos devemos então decidir onde essa pagina vai ser adicionada. Para isso utilizamos o algoritmo de LFU, que decide em qual page frame a que foi lida vai ser escrita.
+	O algoritmo LFU escolhe a page frame, se tiver uma vazia é a escolhida. Se não escolhe a menos acessada dentre as mapeadas para ser substituída. 
+
+	SWAP ??
+	O programa imprime o processo, o endereço fisico e o tipo de acesso para cada linha.
+
+
+
+
+ESTRUTURA DE DAODS:
+	Utilizamos no nosso programa quatro estruturas de dados:
+	Uma para página que contem o processo, o índice, o offset e qual seu acesso. -> Pagina
+	Uma para a tabela de páginas que contem o processo e o vetor de índice das frames. ->TabelaDePaginas
+	Uma para as frames, que possui o contador de referências e se foi modificada e a página. -> Frame
+	Uma para a memória física, que contem o índice do primeiro frame vazio e também o vetor de frames. ->MemoriaFisica
+
+
+SINAIS:
+	Quando ocorre um page fault emitimos um sinal SIGUSR1 para o gerenciador.
+	Quando enceramos a execução pelo terminal emite SIGQUIT e terminamos o programa, liberando sua memória.
+	Para parar e continuar um processo o gerenciador o SIGSTOP e SIGINT. 
+
+
+EXEMPLO
+??
+
+AVALIACAO ??
+
+
+	
